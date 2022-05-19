@@ -1,20 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Movie App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-item>
+  <ion-label position="floating">Titulo</ion-label>
+  <ion-input  [(ngModel)]="title"  ngModel (ngModelChange)='getTitle($event)' name="title"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Idioma</ion-label>
+  <ion-input  ngModel (ngModelChange)='getLang($event)'></ion-input>
+</ion-item>
+<ion-list  >
+  <ion-radio-group  ngModel (ngModelChange)='getCate($event)'>
+    <ion-list-header>
+      <ion-label>
+        Categoria
+      </ion-label>
+    </ion-list-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+      <ion-label>Ação</ion-label>
+      <ion-radio value="Ação"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Aventura</ion-label>
+      <ion-radio value="Aventura"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sci-fi</ion-label>
+      <ion-radio value="Sci-fi"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Terror</ion-label>
+      <ion-radio value="Terror"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Suspense</ion-label>
+      <ion-radio value="Suspense"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
+<ion-button expand="full" shape="round" fill="outline" (click)="cadastrar()">Cadastrar</ion-button>
 </ion-content>

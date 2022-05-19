@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sec</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Titulo: {{title}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Idioma: {{language}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria: {{cate}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+<ion-button expand="full" shape="round" fill="outline" (click)="back()">Corrigir</ion-button>
+<ion-button expand="full" shape="round" (click)="ok()">Confirmar</ion-button>
+</ion-content>

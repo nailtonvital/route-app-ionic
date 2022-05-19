@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sec/:title/:lang/:cate',
+    loadChildren: () => import('./sec/sec.module').then( m => m.SecPageModule)
+  },
+  {
+    path: 'trd',
+    loadChildren: () => import('./trd/trd.module').then( m => m.TrdPageModule)
+  },
 ];
 
 @NgModule({
