@@ -35,6 +35,6 @@ export class HomePage {
       category: this.cate
     })
     console.log(this.dados[0])
-    this.router.navigateByUrl(`/sec/${this.dados[0].title}/${this.language}/${this.cate}`)
+    this.router.navigateByUrl(`/sec/${this.title}/${this.language}/${this.cate}`)
   }
 }
